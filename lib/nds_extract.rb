@@ -5,6 +5,8 @@ require 'directors_database'
 #
 # { directorOne => allTheMoneyTheyMade, ... }
 
+nds = directors_database
+
 def movie_totals(nds, director)
  movie = 0
  total = 0
@@ -17,8 +19,6 @@ def movie_totals(nds, director)
  end
 
 def directors_totals(nds)
-
-nds = directors_database
 
 result = {}
 director = 0
