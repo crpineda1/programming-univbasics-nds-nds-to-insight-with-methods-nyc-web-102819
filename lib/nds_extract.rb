@@ -7,7 +7,7 @@ require 'directors_database'
 
 nds = directors_database
 
-#method
+# method
 def movie_totals(nds, director)
  movie = 0
  total = 0
@@ -19,7 +19,7 @@ def movie_totals(nds, director)
  return total
  end
 
-#main code
+# main code
 def directors_totals(nds)
 
 result = {}
