@@ -5,7 +5,32 @@ require 'directors_database'
 #
 # { directorOne => allTheMoneyTheyMade, ... }
 
+def movie_totals(nds, director)
+ movie = 0
+ total = 0
+ movie_count = nds[director][:movies].count
+ while movie < movie_count do
+   total += nds[director][:movies][movie][:worldwide_gross]
+   movie += 1
+ end
+ return total
+ end
+
 def directors_totals(nds)
+
+nds = directors_database
+
+result = {}
+director = 0
+while director < nds.count do
+ result[nds[director][:name]] = movie_totals(nds,director)
+ director += 1
+end
+p result
+
+end
+
+
   result = {}
   nil
 end
